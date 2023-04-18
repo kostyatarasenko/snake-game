@@ -62,9 +62,6 @@ const Game = () => {
           {gameState === GameState.Playing ? "Pause" : "Play"}
         </button>
       )}
-      <span className="score">{`Your score is ${
-        (snakeBody.length - 1) * 10
-      }`}</span>
     </div>
   );
 };

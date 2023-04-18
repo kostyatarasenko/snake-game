@@ -66,27 +66,27 @@ export const useGameFlow = ({
 
     switch (direction) {
       case Direction.UP:
-        if (snakeHeadPos.y <= 0 + SEG_SIZE) {
+        if (snakeHeadPos.y < SEG_SIZE) {
           onGameOver();
         }
 
         newBody = moves.up(snakeBody);
         break;
       case Direction.DOWN:
-        if (snakeHeadPos.y >= boardHeight - SEG_SIZE * 2) {
+        if (snakeHeadPos.y > boardHeight - SEG_SIZE * 2) {
           onGameOver();
         }
 
         newBody = moves.down(snakeBody);
         break;
       case Direction.RIGHT:
-        if (snakeHeadPos.x >= boardWidth - SEG_SIZE * 2) {
+        if (snakeHeadPos.x > boardWidth - SEG_SIZE * 2) {
           onGameOver();
         }
         newBody = moves.right(snakeBody);
         break;
       case Direction.LEFT:
-        if (snakeHeadPos.x <= 0 + SEG_SIZE) {
+        if (snakeHeadPos.x < SEG_SIZE) {
           onGameOver();
         }
 
